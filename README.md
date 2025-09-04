@@ -87,11 +87,11 @@ Bigquery view :
 
 ## 📊 Looker Studio 
 
-# LookML file
+### LookML file
 As I did not have access to Looker, I created every file I might need in the **LookML** folder.
 This helped me understand the LookML syntax.
 
-# Looker Studio Dashboard
+### Looker Studio Dashboard
 
 **Name**: DBT_Ecommerce_Analysis    
 **Link**: https://lookerstudio.google.com/s/go-DJ2ZVvz0  
