@@ -85,7 +85,7 @@ dbt docs serve     # Ouvrir dans le navigateur
 
 ---
 
-**Technologies** : dbt-core, BigQuery, SQL, Looker
+**Technologies** : dbt-core, BigQuery, SQL, Looker  
 **Dataset** : TheLook E-commerce (BigQuery public data) 
 
 
@@ -97,13 +97,29 @@ Cela m'a permis de comprendre la syntaxe du LookML.
 
 # Dashboard Looker Studio
 
-**nom**: DBT_Ecommerce_Analyse
-**structure** :
-    1. Résumé analytique
-    2. Analyse des produits et des stocks
-    3. Analyse Client et Segmentation
-    4. Opérations et Logistique
-    5. Analyse Saisonnière et Prévisions
-**lien** : https://lookerstudio.google.com/s/go-DJ2ZVvz0
+**Nom**: DBT_Ecommerce_Analyse    
+**Lien** : https://lookerstudio.google.com/s/go-DJ2ZVvz0  
+**Structure** :  
+1. Résumé analytique
+<p align="center">
+  <img src="images/Dashboard_page1.png" alt="Dashboard page 1" width="600"/>
+</p>  
+2. Analyse des produits et des stocks
+<p align="center">
+  <img src="images/Dashboard_page2.png" alt="Dashboard page 1" width="600"/>
+</p>  
+3. Analyse Client et Segmentation
+<p align="center">
+  <img src="images/Dashboard_page3.png" alt="Dashboard page 1" width="600"/>
+</p>  
+4. Opérations et Logistique
+<p align="center">
+  <img src="images/Dashboard_page4.png" alt="Dashboard page 1" width="600"/>
+</p>  
+5. Analyse Saisonnière et Prévisions
+<p align="center">
+  <img src="images/Dashboard_page5.png" alt="Dashboard page 1" width="600"/>
+</p>  
+
 
 
