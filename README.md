@@ -1,116 +1,116 @@
 # TheLook E-commerce Analytics - dbt Project
 
-## 📋 Vue d'ensemble
+## 📋 Overview
 
-Ce projet dbt transforme les données brutes de TheLook E-commerce en modèles analytiques prêts pour Looker. Il suit une architecture en 3 couches (staging → intermediate → marts).
+This dbt project transforms raw data from TheLook E-commerce into analytical models ready for Looker. It follows a 3-layer architecture (staging → intermediate → marts).
 
-## 🎯 Objectif de ce projet
+## 🎯 Project objective
 
-Se former en créant un projet avec des outils BI :
-- **dbt** pour la transformation de données
-- **BigQuery** comme entrepôt de données
-- **Looker** pour la visualisation
+Learn by creating a project with BI tools:
+- **dbt** for data transformation
+- **BigQuery** as a data warehouse
+- **Looker** for visualisation
 
-## 🏗️ Architecture simplifiée
+## 🏗️ Simplified architecture
 
 ```
 models/
-├── staging/          # 🧹 Nettoyage des données brutes
-│   ├── stg_users.sql         # Clients avec age_group, gender_clean
-│   ├── stg_orders.sql        # Commandes avec statuts normalisés  
-│   ├── stg_order_items.sql   # Items avec prix nettoyés
-│   └── stg_products.sql      # Produits avec calculs de marge
+├── staging/          # 🧹 Raw data cleaning
+│   ├── stg_users.sql         # Customers with age_group, gender_clean
+│   ├── stg_orders.sql        # Orders with normalised statuses  
+│   ├── stg_order_items.sql   # Items with cleaned prices
+│   └── stg_products.sql      # Products with margin calculations
 │
-├── intermediate/     # 🔄 Agrégations métier
-│   ├── int_user_orders.sql   # Métriques par client (RFM)
-│   └── int_product_metrics.sql # Performance par produit
+├── intermediate/     # 🔄 Business aggregations
+│   ├── int_user_orders.sql   # Metrics per customer (RFM)
+│   └── int_product_metrics.sql # Performance per product
 │
-└── marts/           # 📊 Tables finales pour Looker
-    ├── dim_users.sql         # Dimension clients enrichie
-    ├── dim_products.sql      # Dimension produits avec KPIs  
-    └── fact_sales.sql        # Faits de ventes (cœur analytique)
+└── marts/           # 📊 Final tables for Looker
+    ├── dim_users.sql         # Enriched customer dimension
+    ├── dim_products.sql      # Product dimension with KPIs  
+    └── fact_sales.sql        # Sales facts (analytical core)
 ```
 
-## 🎯 Métriques Business disponibles
+## 🎯 Available Business Metrics
 
-### 👥 Analyse Clients
-- **Segmentation RFM** : VIP (10+ commandes, 500€+ CA) → One-time
-- **Statut de la derniere commande** : Active (≤30j) → Lost (>180j)
-- **Panier moyen** et fréquence d'achat
+### 👥 Customer Analysis
+- **RFM Segmentation**: VIP (10+ orders, £500+ turnover) → One-time
+- **Last order status**: Active (≤30 days) → Lost (>180 days)
+- **Average basket size** and purchase frequency
 
-### 🛍️ Performance Produits  
-- **Classification automatique** : Star → Underperformer (selon CA/volume)
-- **Rentabilité** : Marge brute, profit total par produit
-- **Statut d'activité** : Active → Discontinued
+### 🛍️ Product Performance  
+- **Automatic classification**: Star → Underperformer (based on turnover/volume)
+- **Profitability**: Gross margin, total profit per product
+- **Activity status**: Active → Discontinued
 
-### 💰 Métriques Financières
-- **CA** par période/segment/canal
-- **Profit** et marges par transaction
-- **Remises** appliquées vs prix de détail
-- **Saisonnalité** des ventes
+### 💰 Financial Metrics
+- **Revenue** by period/segment/channel
+- **Profit** and margins per transaction
+- **Discounts** applied vs retail price
+- **Seasonality** of sales
 
-## 🚀 Déployement (3 commandes)
+## 🚀 Deployment (3 commands)
 
 ```bash
-# 1. Vérifier la configuration
+# 1. Check configuration
 dbt debug
 
-# 2. Construire tous les modèles  
+# 2. Build all models  
 dbt run
 
-# 3. Tester la qualité des données
+# 3. Test data quality
 dbt test
 ```
 
-## 🧪 Qualité des données
+## 🧪 Data quality
 
-Tests automatiques inclus :
-- **Unicité** des clés primaires 
-- **Cohérence** des références (user_id, product_id)
-- **Non-nullité** des champs critiques (sale_price, order_date)
+Automatic tests included:
+- **Uniqueness** of primary keys 
+- **Consistency** of references (user_id, product_id)
+- **Non-nullity** of critical fields (sale_price, order_date)
 
-## 💡 Points techniques mis en avant
+## 💡 Technical highlights
 
-✅ **Architecture scalable** : staging → intermediate → marts  
-✅ **Modularité** : Chaque couche a un rôle précis  
-✅ **Performance** : Vues pour staging, tables pour marts  
-✅ **Documentation** : Commentaires explicatifs dans chaque modèle  
+✅ **Scalable architecture**: staging → intermediate → marts  
+✅ **Modularity**: Each layer has a specific role  
+✅ **Performance**: Views for staging, tables for marts  
+✅ **Documentation**: Explanatory comments in each model  
 
 ---
 
-**Technologies** : dbt-core, BigQuery, SQL, Looker  
-**Dataset** : TheLook E-commerce (BigQuery public data) 
+**Technologies**: dbt-core, BigQuery, SQL, Looker  
+**Dataset**: TheLook E-commerce (BigQuery public data) 
 
 
 ## 📊 Looker Studio 
 
-# Fichier LookML
-Comme je n'avais pas accès à Looker, j'ai créer dansle dossier **LookML** chaque fichier que j'aurais pu avoir besoin.
-Cela m'a permis de comprendre la syntaxe du LookML.
+# LookML file
+As I did not have access to Looker, I created every file I might need in the **LookML** folder.
+This helped me understand the LookML syntax.
 
-# Dashboard Looker Studio
+# Looker Studio Dashboard
 
-**Nom**: DBT_Ecommerce_Analyse    
-**Lien** : https://lookerstudio.google.com/s/go-DJ2ZVvz0  
-**Structure** :  
-1. Résumé analytique
-<p align="center">
+**Name**: DBT_Ecommerce_Analysis    
+**Link**: https://lookerstudio.google.com/s/go-DJ2ZVvz0  
+**Structure**:  
+1. Analytical summary
+<p align="centre">
   <img src="images/Dashboard_page1.png" alt="Dashboard page 1" width="600"/>
 </p>  
-2. Analyse des produits et des stocks
-<p align="center">
+2. Product and inventory analysis
+<p align="centre">
   <img src="images/Dashboard_page2.png" alt="Dashboard page 1" width="600"/>
 </p>  
-3. Analyse Client et Segmentation
-<p align="center">
+3. Customer analysis and segmentation
+<p align="centre">
   <img src="images/Dashboard_page3.png" alt="Dashboard page 1" width="600"/>
 </p>  
-4. Opérations et Logistique
-<p align="center">
+4. Operations and Logistics
+<p align="centre">
   <img src="images/Dashboard_page4.png" alt="Dashboard page 1" width="600"/>
 </p>  
-5. Analyse Saisonnière et Prévisions
-<p align="center">
+5. Seasonal Analysis and Forecasting
+<p align="centre">
   <img src="images/Dashboard_page5.png" alt="Dashboard page 1" width="600"/>
 </p>  
 
