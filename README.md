@@ -69,13 +69,6 @@ Tests automatiques inclus :
 - **Cohérence** des références (user_id, product_id)
 - **Non-nullité** des champs critiques (sale_price, order_date)
 
-## 📚 Documentation auto-générée
-
-```bash
-dbt docs generate  # Créer la documentation
-dbt docs serve     # Ouvrir dans le navigateur
-```
-
 ## 💡 Points techniques mis en avant
 
 ✅ **Architecture scalable** : staging → intermediate → marts  
