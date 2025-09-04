@@ -79,8 +79,11 @@ Automatic tests included:
 ---
 
 **Technologies**: dbt-core, BigQuery, SQL, Looker  
-**Dataset**: TheLook E-commerce (BigQuery public data) 
-
+**Dataset**: TheLook E-commerce (BigQuery public data)  
+Vue de BigQuery :  
+<p align="centre">
+  <img src="images/Bigquery_view.png" alt="Preview Bigquery" width="600"/>
+</p>  
 
 ## 📊 Looker Studio 
 
@@ -99,19 +102,19 @@ This helped me understand the LookML syntax.
 </p>  
 2. Product and inventory analysis
 <p align="centre">
-  <img src="images/Dashboard_page2.png" alt="Dashboard page 1" width="600"/>
+  <img src="images/Dashboard_page2.png" alt="Dashboard page 2" width="600"/>
 </p>  
 3. Customer analysis and segmentation
 <p align="centre">
-  <img src="images/Dashboard_page3.png" alt="Dashboard page 1" width="600"/>
+  <img src="images/Dashboard_page3.png" alt="Dashboard page 3" width="600"/>
 </p>  
 4. Operations and Logistics
 <p align="centre">
-  <img src="images/Dashboard_page4.png" alt="Dashboard page 1" width="600"/>
+  <img src="images/Dashboard_page4.png" alt="Dashboard page 4" width="600"/>
 </p>  
 5. Seasonal Analysis and Forecasting
 <p align="centre">
-  <img src="images/Dashboard_page5.png" alt="Dashboard page 1" width="600"/>
+  <img src="images/Dashboard_page5.png" alt="Dashboard page 5" width="600"/>
 </p>  
 
 
