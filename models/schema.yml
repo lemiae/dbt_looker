@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_sessions
+    description: "Données de sessions Google Analytics, uniquement pour janvier 2017"
+    columns:
+      - name: session_date
+        tests:
+          - not_null
+      - name: country
+        tests:
+          - not_null
+
+  - name: fct_sessions_by_country
+    description: "Agrégation des sessions par pays"
+    columns:
+      - name: country
+        tests:
+          - not_null
+
+  - name: fct_sessions_by_device
+    description: "Sessions agrégées par device et jour"
