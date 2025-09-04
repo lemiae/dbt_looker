@@ -80,7 +80,7 @@ Automatic tests included:
 
 **Technologies**: dbt-core, BigQuery, SQL, Looker  
 **Dataset**: TheLook E-commerce (BigQuery public data)  
-Vue de BigQuery :  
+Bigquery view :  
 <p align="centre">
   <img src="images/Bigquery_view.png" alt="Preview Bigquery" width="600"/>
 </p>  
